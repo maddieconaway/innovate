@@ -9,14 +9,10 @@ var memberList = [
     {name: "Candace", age: 20},
     {name: "Savvy", age: 24},
     {name: "Levi", age: 30}
-]
+];
 
 console.log(sayHello());
-checkAge("Charles", 21);
-checkAge("Abby", 27);
-checkAge("James", 18);
-checkAge("John", 17);
-console.log("before listVeggies");
+
 listVeggies();
 
 var j = 0;
