@@ -7,30 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
     <link type="text/css" rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="board">
         <h1>Tic Tac Toe</h1>
-        <div class="row">
-            <div class="top left"></div>
-            <div class="top middle"></div>
-            <div class="top right"></div>
+        <div id="result">
+            <h3></h3>
+        </div>
+        <div id="row" class="rowCls">
+            <div id="cell" data-id="00" class="top left fixFont"></div>
+            <div id="cell" data-id="01"class="top middle fixFont"></div>
+            <div id="cell" data-id="02"class="top right fixFont"></div>
             <br style="clear: both;" />
         </div>
-        <div class="row" >
-            <div class="center left"></div>
-            <div class="center middle"></div>
-            <div class="center right"></div>
+        <div id="row" class="rowCls" >
+            <div id="cell" data-id="10" class="center left fixFont"></div>
+            <div id="cell" data-id="11" class="center middle fixFont"></div>
+            <div id="cell" data-id="12" class="center right fixFont"></div>
             <br style="clear: both;" />
         </div>
-        <div class="row">
-            <div class="bottom left"></div>
-            <div class="bottom middle"></div>
-            <div class="bottom right"></div>
+        <div id="row" class="rowCls">
+            <div id="cell" data-id="20" class="bottom left fixFont"></div>
+            <div id="cell" data-id="21" class="bottom middle fixFont"></div>
+            <div id="cell" data-id="22" class="bottom right fixFont"></div>
             <br style="clear: both;" />
         </div>
     </div>
+    <div id="divButton">
+        <button type="button" id="reset">Start Over</button>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 

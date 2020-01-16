@@ -25,16 +25,26 @@
     border-left: 1px black solid;
 }
 
+.fixFont {
+    font-size: 80px;
+}
 #board {
     padding: 3em;
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
-.row {
+#result {
+    display: inline-block;
+    width: 400px;
+    height: 30px;
+}
+
+.rowCls {
     margin: 0 auto;
     width: 304px;
 }
-.row div {
+.rowCls div {
     float: left;
     align-items: center;
     text-align: center;
@@ -42,3 +52,12 @@
     width: 100px;
     cursor: pointer;
 }
+
+.cellCls div {
+    vertical-align: middle;
+    align-content: center;
+}
+#divButton {
+    text-align: center;
+}
+
