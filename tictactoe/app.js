@@ -11,9 +11,10 @@ function setCell(e) {
     let saveChar = "";
     if (!document.querySelector("#board").querySelector("#result").textContent.endsWith("has WON!")) {
         //if the cell is blank then it is okay to set the marker (X or O) in that cell
-        if (e.target.textContent.trim.length == 0) {
+        if (e.target.textContent.trim.length == 0 && e.target.id=="cell") {
             e.target.style.background=`url(${splat})`;
             e.target.style.backgroundSize = 'cover';
+            soundsplat.play();
             saveChar = currentChar;
             //parse the data id into row-column pair
             let gridRow = e.target.getAttribute("data-id").substr(0, 1);
