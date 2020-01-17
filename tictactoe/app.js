@@ -1,5 +1,6 @@
 
 var currentChar = "X";
+var splat = "redsplat.png";
 var d = document.getElementById("board");
 d.addEventListener('click', setCell, false);
 var b = document.getElementById("reset");
@@ -11,7 +12,8 @@ function setCell(e) {
     if (!document.querySelector("#board").querySelector("#result").textContent.endsWith("has WON!")) {
         //if the cell is blank then it is okay to set the marker (X or O) in that cell
         if (e.target.textContent.trim.length == 0) {
-            e.target.textContent = currentChar;
+            e.target.style.background=`url(${splat})`;
+            e.target.style.backgroundSize = 'cover';
             saveChar = currentChar;
             //parse the data id into row-column pair
             let gridRow = e.target.getAttribute("data-id").substr(0, 1);
@@ -22,8 +24,10 @@ function setCell(e) {
             //toggle marker
             if (currentChar == "X") {
                 currentChar = "O";
+                splat="bluesplat.png";
             } else {
                 currentChar = "X";
+                splat="redsplat.png";
             }
             checkForWinner(saveChar);
             checkForDraw();
@@ -37,6 +41,7 @@ function startOver(e) {
     let rows = document.querySelector("#board").querySelectorAll("#row");
     rows.forEach(processRow);
     currentChar = "X";
+    splat="redsplat.png";
     document.querySelector("#board").querySelector("#result").textContent = "";
     resetGrid();
 }
@@ -49,7 +54,7 @@ function processRow(row) {
 
 //clear out the current cell
 function processCol(col) {
-    col.textContent = " ";
+    col.style.background="";
 }
 
 //create the grid array
